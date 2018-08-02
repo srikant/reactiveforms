@@ -1,10 +1,32 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { WelcomeComponent } from './home/welcome.component';
+import { CustomerComponent } from './customers/customer.component';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [
+        RouterModule.forRoot([
+          {
+            path: 'products',
+            loadChildren: './products/product.module#ProductModule'
+          },
+          {
+            path: 'welcome',
+            component: WelcomeComponent
+          },
+          {
+            path: 'customer',
+            component: CustomerComponent
+          },
+          {
+            path: '',
+            redirectTo: '',
+            pathMatch: 'full'
+          },
+            { path: '**', component: WelcomeComponent }
+        ]) // , { enableTracing: true })
+    ],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
