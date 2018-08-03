@@ -20,3 +20,24 @@ input.ng-pristine.ng-invalid.ng-touched {
 .ng-invalid:not(form)  {
   border-left: 5px solid #a94442;
 }*/
+
+body {
+  color: #404040;
+  font-family: "myriad-pro", Verdana, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.navbar-light.bg-light{ background: #bb0826 !important;}
+.navbar-light .navbar-nav .nav-link{
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link{
+  color: yellow;
+}
+.card{
+  margin-top: 1em;
+}

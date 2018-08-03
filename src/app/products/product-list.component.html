@@ -1,7 +1,9 @@
-<div class='card card-primary'>
-  <div class='card-heading'>
-      {{pageTitle}}
+<div class='card'>
+  <div class='card-header'
+       *ngIf='product'>
+    {{pageTitle + ': ' + product.productName}}
   </div>
+
 
   <!-- Filter the Products   -->
   <div class='card-body'>

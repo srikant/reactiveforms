@@ -20,9 +20,9 @@ export class ProductService {
 
     // getProducts(): Observable<IProduct[]> {
       getProducts(): Observable<IProduct[]> {
-      if (this.products) {
-          return of(this.products);
-      }
+      // if (this.products) {
+      //     return of(this.products);
+      // }
       return this.http.get<IProduct[]>(this.productsUrl)
                       .pipe(
                         tap(data => console.log(JSON.stringify(data))),
